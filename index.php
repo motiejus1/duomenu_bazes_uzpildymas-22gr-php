@@ -25,7 +25,7 @@ for($i=0; $i<1000; $i++) {
     $name = 'vardas'.$i;
     $description = 'aprasymas'.$i;
     $price = (mt_rand()/ mt_getrandmax())*$i;
-   
+//    SELECT id, name, description, price FROM `products` WHERE 1
     $sql = "INSERT INTO `products`(`name`, `description`, `price`) VALUES ('$name','$description','$price')";
 
     if(mysqli_query($conn, $sql)) {
